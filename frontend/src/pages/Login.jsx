@@ -16,14 +16,12 @@ const Login = () => {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
-    // Handle input changes
     const handleChange = (e) => {
         setLoginData((prev) => ({
             ...prev,
             [e.target.name]: e.target.value,
         }));
 
-        // Clear individual field errors while typing
         setErrors((prev) => ({
             ...prev,
             [e.target.name]: "",
@@ -31,7 +29,6 @@ const Login = () => {
         }));
     };
 
-    // Validate form fields
     const validateForm = () => {
         const newErrors = {};
 
@@ -42,7 +39,6 @@ const Login = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -53,24 +49,22 @@ const Login = () => {
         try {
             const response = await authAPI.login(loginData);
 
-            // Check if response has required data
             if (!response.name || !response.email) {
                 throw new Error("Invalid response from server");
             }
 
-            // Update auth context
             login({
                 name: response.name,
                 email: response.email,
                 role: response.role,
             });
 
-            // Navigate to user complaints page
+          
             navigate("/my-complaint");
         } catch (error) {
             console.error("Login failed:", error);
 
-            // Show friendly error
+        
             setErrors({
                 general:
                     error.message ||
