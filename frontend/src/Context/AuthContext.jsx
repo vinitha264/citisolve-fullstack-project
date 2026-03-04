@@ -1,4 +1,3 @@
-// src/Context/AuthContext.jsx
 import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
@@ -24,7 +23,6 @@ export const AuthProvider = ({ children }) => {
     );
 };
 
-// ✅ VERY IMPORTANT EXPORT
 export const useAuth = () => {
     return useContext(AuthContext);
 };
