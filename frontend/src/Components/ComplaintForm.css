@@ -1,0 +1,110 @@
+.complaint-form-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #f4f6f9, #e9eff5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.complaint-form-container form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-form-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+.complaint-form-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+.complaint-form-container input,
+.complaint-form-container textarea,
+.complaint-form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.complaint-form-container textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+.complaint-form-container input:focus,
+.complaint-form-container textarea:focus,
+.complaint-form-container select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.complaint-form-container p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: red;
+}
+
+.complaint-form-container form div {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.complaint-form-container button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.param {
+    color: #5a6268;
+}
+
+.complaint-form-container button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.complaint-form-container button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+.complaint-form-container button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.complaint-form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .complaint-form-container form {
+        padding: 20px;
+    }
+}

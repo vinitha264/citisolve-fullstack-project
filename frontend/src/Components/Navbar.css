@@ -1,0 +1,116 @@
+.navbar {
+    width: 100%;
+    background: rgb(233, 230, 237);
+    padding: 12px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* LEFT */
+.navbar-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* CENTER */
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* RIGHT */
+.navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #6c63ff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #6c63ff;
+}
+
+/* Welcome Text */
+.navbar p {
+    margin: 0;
+    font-weight: 600;
+    color: black;
+}
+
+/* Logout Button */
+.navbar button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(222, 14, 14);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #f43d3d;
+    transform: translateY(-2px);
+}
+
+/* Login/Register Button */
+.nav-btn {
+    padding: 6px 14px;
+    background-color: #6c63ff;
+    color: white !important;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #574fd6;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-left,
+    .navbar-center,
+    .navbar-right {
+        flex: none;
+        justify-content: center;
+    }
+}
