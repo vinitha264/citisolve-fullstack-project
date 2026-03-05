@@ -1,6 +1,4 @@
-const BASE_URL =
-    import.meta.env.VITE_BACKEND_URL || "https://citisolve-fullstack-project.onrender.com";
-
+const BASE_URL = "https://citisolve-fullstack-project.onrender.com";
 
 const callAPI = async (endpoint, options = {}) => {
     try {
