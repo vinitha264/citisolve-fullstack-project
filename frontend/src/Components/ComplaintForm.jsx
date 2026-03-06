@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ComplaintForm.css";
 import { useNavigate } from "react-router-dom";
+import { Base_URL } from "../services/API";
 
 const ComplaintForm = () => {
     const navigate = useNavigate();
@@ -47,7 +48,7 @@ const ComplaintForm = () => {
         if (!validateForm()) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/complaints", {
+            const response = await fetch(`${BASE_URL}/api/complaints`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
