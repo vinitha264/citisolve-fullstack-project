@@ -8,9 +8,9 @@ dotenv.config();
 const app = express();
 
 const allowedOrigins = [
-    "http://localhost:5173", // optional previous dev port
-    "http://localhost:5174", // your current local frontend
-    "https://your-frontend-deployed-url.com" // production frontend
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://citisolve-fullstack-project-1.onrender.com" // production frontend
 ];
 
 app.use(
