@@ -9,7 +9,7 @@ const MyComplaint = () => {
     const [statusFilter, setStatusFilter] = useState("All");
 
     useEffect(() => {
-        fetch(`${BASE_URL}/api/complaints`)
+        fetch(`${BASE_URL}/api/complaints`,{credentials: "include"})
             .then((res) => res.json())
             .then((data) => setComplaints(data))
             .catch((err) => console.log("Error fetching complaints:", err));
@@ -23,9 +23,10 @@ const MyComplaint = () => {
 
         try {
             await fetch(
-                `${BASE_URL}/api/complaints/delete/${id}`,
+                `${BASE_URL}/api/complaints/${id}`,
                 {
                     method: "DELETE",
+                    credentials: "include",
                 }
             );
 
