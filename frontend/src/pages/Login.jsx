@@ -49,14 +49,14 @@ const Login = () => {
         try {
             const response = await authAPI.login(loginData);
 
-            if (!response.name || !response.email) {
+            if (!response.user || !response.user.name || !response.user.email) {
                 throw new Error("Invalid response from server");
             }
 
             login({
-                name: response.name,
-                email: response.email,
-                role: response.role,
+                name: response.user.name,
+                email: response.user.email,
+                role: response.user.role,
             });
 
           
