@@ -53,7 +53,7 @@ const ComplaintForm = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                credentials: "include"
+                credentials: "include",
                 body: JSON.stringify(formData),
             });
         const data = await response.json().catch(()=>({}));
