@@ -53,18 +53,20 @@ const ComplaintForm = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
+                credentials: "include"
                 body: JSON.stringify(formData),
             });
+        const data = await response.json().catch(()=>({}));
 
             if (!response.ok) {
-                throw new Error("Failed to submit complaint");
+                throw new Error(data.message || "Failed to submit complaint");
             }
 
             alert("Complaint Submitted Successfully!");
             navigate("/my-complaint");
         } catch (error) {
             console.error("Error:", error);
-            alert("Something went wrong!");
+            alert(error.message || "Something went wrong!");
         }
     }
 
